@@ -32,7 +32,7 @@ async function buildInsights() {
   const processed = preprocessTickets(tickets);
 
   console.log("3. Limiting dataset");
-  const subset = processed.slice(0, 500);
+  const subset = processed.slice(0, 300);
 
   console.log("4. Clustering");
   const clustered = await clusterTickets(subset);
