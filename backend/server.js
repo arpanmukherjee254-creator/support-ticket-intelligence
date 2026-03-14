@@ -10,7 +10,7 @@ import { labelClusters } from "./src/services/clusterLabeler.js";
 import { detectTrend } from "./src/services/trendDetector.js";
 
 const app = express();
-const PORT = 5000;
+const PORT = 8080;
 app.use(cors());
 app.use(express.json());
 
