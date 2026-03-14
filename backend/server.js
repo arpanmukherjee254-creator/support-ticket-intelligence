@@ -10,7 +10,7 @@ import { labelClusters } from "./src/services/clusterLabeler.js";
 import { detectTrend } from "./src/services/trendDetector.js";
 
 const app = express();
-const PORT = 8080;
+const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
@@ -32,7 +32,7 @@ async function buildInsights() {
   const processed = preprocessTickets(tickets);
 
   console.log("3. Limiting dataset");
-  const subset = processed.slice(0, 150);
+  const subset = processed.slice(0, 500);
 
   console.log("4. Clustering");
   const clustered = await clusterTickets(subset);
